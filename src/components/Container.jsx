@@ -1,22 +1,14 @@
-import Nav from "./Nav";
-import Section from "./Section";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
-import Footer from "./Footer";
-import Carousel from "./Carousel";
+import Nav from "./NavBar/Nav";
+import ItemListContainer from "./ItemListContainer/ItemListContainer";
 
 
 
 
 function Container(props){
     return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col">
         <Nav />
-        <Carousel />
-        <Section />
-        <Section2 />
-        <Section3 />
-        <Footer />
+        <ItemListContainer greeting={'Bienvenidos'}/>
     </div>
     );
 }
