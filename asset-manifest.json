@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pippa-ecom/static/css/main.2c2a4b9c.css",
-    "main.js": "/pippa-ecom/static/js/main.0d8f853f.js",
+    "main.css": "/pippa-ecom/static/css/main.9e1e44e6.css",
+    "main.js": "/pippa-ecom/static/js/main.59b888b6.js",
     "static/media/logo.png": "/pippa-ecom/static/media/logo.f0eed73134f6b1d7da2f.png",
     "index.html": "/pippa-ecom/index.html",
-    "main.2c2a4b9c.css.map": "/pippa-ecom/static/css/main.2c2a4b9c.css.map",
-    "main.0d8f853f.js.map": "/pippa-ecom/static/js/main.0d8f853f.js.map"
+    "main.9e1e44e6.css.map": "/pippa-ecom/static/css/main.9e1e44e6.css.map",
+    "main.59b888b6.js.map": "/pippa-ecom/static/js/main.59b888b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c2a4b9c.css",
-    "static/js/main.0d8f853f.js"
+    "static/css/main.9e1e44e6.css",
+    "static/js/main.59b888b6.js"
   ]
 }
