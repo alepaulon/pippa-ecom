@@ -8,6 +8,8 @@ const ItemListContainer = ({ greeting }) => {
 
     const { categoryId } = useParams()
     
+    console.log(products)
+
     useEffect(() => {
         const asyncFunc = categoryId ? getProductsByCategory : getProducts
         
@@ -15,12 +17,14 @@ const ItemListContainer = ({ greeting }) => {
             .then(response => {
                 setProducts(response)
             })
+            
             .catch(error => {
                 console.error(error)
             })
-    }, [categoryId])
+            
+    }, [categoryId]
+    )
 
-    
     return (
         <div className="flex flex-col justify-center mt-10">
             <h1 className="text-center font-bold text-3xl">{greeting}</h1>

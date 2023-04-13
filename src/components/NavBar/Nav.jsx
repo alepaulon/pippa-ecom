@@ -11,9 +11,9 @@ function Nav(props) {
         </Link>
       </div>
       <div className="">
-        <NavLink to={`/categoria/cuchas`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Cuchas</NavLink>
-        <NavLink to={`/categoria/ropa`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Ropa</NavLink>
-        <NavLink to={`/categoria/comederos`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Comederos</NavLink>
+        <NavLink to={`/categoria/Cuchas`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Cuchas</NavLink>
+        <NavLink to={`/categoria/Ropa`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Ropa</NavLink>
+        <NavLink to={`/categoria/Comederos`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Comederos</NavLink>
       </div>
       <CartWidget />
     </nav>
