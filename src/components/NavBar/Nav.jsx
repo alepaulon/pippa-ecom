@@ -1,18 +1,19 @@
 import logo from './img/logo.png';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link, NavLink } from 'react-router-dom';
 
 function Nav(props) {
   return (
     <nav className="bg-slate-400 flex flex-row items-center justify-between">
       <div>
-        <a href=".">
+        <Link to='/'>
           <img className="h-32 mt-5" src={logo} alt="Pippa&Co logo" />
-        </a>
+        </Link>
       </div>
       <div className="">
-        <button className='bg-gray-200 px-4 py-1 m-10 rounded-full'>PRODUCTOS</button>
-        <button className='bg-gray-200 px-4 py-1 m-10 rounded-full'>GUÍA DE TALLES</button>
-        <button className='bg-gray-200 px-4 py-1 m-10 rounded-full'>NOSOTROS</button>
+        <NavLink to={`/categoria/cuchas`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Cuchas</NavLink>
+        <NavLink to={`/categoria/ropa`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Ropa</NavLink>
+        <NavLink to={`/categoria/comederos`} className='bg-gray-200 px-4 py-1 m-10 rounded-full'>Comederos</NavLink>
       </div>
       <CartWidget />
     </nav>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Item = ({id, nombre, categoria, img, precio, stock}) => {
 
@@ -13,7 +14,7 @@ const Item = ({id, nombre, categoria, img, precio, stock}) => {
             <p className="font-bold text-lg mb-4">${precio}</p>
         </section>
         <footer>
-            <button className="bg-cyan-400 hover:bg-cyan-500 rounded-2xl text-white font-semibold px-4 py-2">Ver detalle</button>
+            <Link to={`/item/${id}`} className="bg-cyan-400 hover:bg-cyan-500 rounded-2xl text-white font-semibold px-4 py-2">Ver detalle</Link>
         </footer>
     </article>
   )
