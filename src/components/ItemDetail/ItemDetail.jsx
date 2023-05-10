@@ -34,9 +34,6 @@ const ItemDetail = ({id, nombre, categoria, descripcion, img, precio, stock}) =>
                     ${precio}
                 </p>
                 <p className="text-lg mb-4">
-                    Categoría: {categoria}
-                </p>
-                <p className="text-lg mb-4">
                     Descripción: {descripcion}
                 </p>
             </section>
@@ -48,6 +45,7 @@ const ItemDetail = ({id, nombre, categoria, descripcion, img, precio, stock}) =>
                         <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
                     )
                 }
+                <Link to='/'><button>Seguir comprando</button></Link>
             </footer>
         </article>
         </div>

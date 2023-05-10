@@ -1,8 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from "firebase/firestore"
+import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyA7-qWljeMK3ABMC3iHAA5jWws_CZB_eQc",
@@ -16,9 +13,3 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app)
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <App />
-);
-
