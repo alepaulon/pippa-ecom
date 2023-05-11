@@ -52,7 +52,7 @@ const ItemListContainer = ({ greeting }) => {
             })
         }, [categoryId])
     return (
-        <div className="flex flex-col justify-center mt-10">
+        <div className="bg-[#faeee7] flex flex-col justify-center border-4 border-[#fffffe] rounded-xl">
             <h1 className="text-center font-bold text-3xl">{greeting}</h1>
             <ItemList products={products} />
         </div>

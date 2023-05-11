@@ -21,8 +21,8 @@ const ItemDetail = ({id, nombre, categoria, descripcion, img, precio, stock}) =>
 
 
     return (
-        <div className="flex justify-center">
-            <article className="bg-blue-100 m-10 p-4 rounded-lg flex flex-col text-center w-80">
+        <div className="bg-[#faeee7] border-4 border-[#fffffe] rounded-lg flex justify-center">
+            <article className="bg-[#ffc6c7] m-10 p-4 rounded-lg flex flex-col text-center w-80 ">
             <header>
                 <h2 className="font-bold text-2xl">{nombre}</h2>
             </header>
@@ -40,12 +40,12 @@ const ItemDetail = ({id, nombre, categoria, descripcion, img, precio, stock}) =>
             <footer>
                 {
                     qtyAdded > 0 ? (
-                        <Link to='/cart'><button className="bg-cyan-400 hover:bg-cyan-500 rounded-2xl text-white font-semibold px-4 py-2">Finalizar compra</button> </Link>
+                        <Link to='/cart'><button className="bg-[#ff8ba7] text-white transition duration-300 ease-in-out hover:bg-[#faeee7] hover:text-[#33272a] rounded-full  font-semibold px-4 py-2 m-4">Finalizar compra</button> </Link>
                     ) : (
                         <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
                     )
                 }
-                <Link to='/'><button>Seguir comprando</button></Link>
+                <Link to='/'><button className="bg-[#ff8ba7] text-white transition duration-300 ease-in-out hover:bg-[#faeee7] hover:text-[#33272a] rounded-full  font-semibold px-4 py-2 m-4">Seguir comprando</button></Link>
             </footer>
         </article>
         </div>

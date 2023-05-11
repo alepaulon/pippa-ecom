@@ -38,33 +38,33 @@ const Checkout = () => {
     const cartCollection = collection(db, "cart");
     addDoc(cartCollection, cartToSave).then((response) =>
         MySwal.fire({
-        title: "Pedido Tomado!",
-        text: `Muchas gracias ${data.nombre} por su compra! \n Se ha enviado a su Email: ${data.email} el ticket con la orden de su compra "${response.id}" `,
+        title: "Pedido Tomado",
+        text: `Gracias ${data.nombre} por su compra! \n Se ha enviado a su email: ${data.email} el ticket con la orden de su compra "${response.id}" `,
         icon: "success",
       })
     );
   };
 
   return (
-    <div>
+    <div className="bg-[#faeee7] flex flex-col items-center border-4 border-[#fffffe] rounded-xl">
       <div>
-        <form onSubmit={handleSubmit(saveData)}>
-          <h2>Datos de Envio</h2>
+        <form onSubmit={handleSubmit(saveData)} className="flex flex-col items-center">
+          <h2 className="font-bold text-2xl text-[#33272a] text-center p-10">Datos de Envío</h2>
           <div>
-            <div>
+            <div className="py-5">
               <input
                 type={"text"}
                 placeholder="Nombre y apellido"
                 {...register("nombre", {
                   required: true,
-                })}
+                })} className="rounded-xl border px-10 text-center"
               />
               {errors.nombre?.type === "required" && (
-                <p>Nombre y apellido requerido!</p>
+                <p className="text-red-600 text-center">Nombre y apellido requerido</p>
               )}
             </div>
           </div>
-          <div>
+          <div className="py-5">
             <input
               type={"text"}
               placeholder="Email"
@@ -72,45 +72,46 @@ const Checkout = () => {
                 pattern:
                   /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/,
               })}
+              className="rounded-xl border px-10 text-center"
             />
             {errors.email?.type === "pattern" && (
-              <p>Formato de Email incorrecto!</p>
+              <p className="text-red-600 text-center">Formato de mail incorrecto</p>
             )}
           </div>
           <div>
-            <div>
+            <div className="py-5">
               <input
-                className="numeroInput"
                 type={"number"}
                 placeholder="Numero de telefono"
                 {...register("telefono", {
                   required: true,
                 })}
+                className="rounded-xl border px-10 text-center"
               />
             </div>
           </div>
 
-          <button type={"submit"}>
-            <span> Enviar! </span>
+          <button type={"submit"} className="bg-[#ff8ba7] text-white text-center max-w-fit transition duration-300 ease-in-out hover:bg-[#faeee7] hover:text-[#33272a] rounded-full font-semibold px-4 py-2">
+            <span>Enviar</span>
           </button>
         </form>
 
-        <div>
-          <span>Resumen</span>
+        <div className="flex flex-col items-center py-10">
+          <span className="font-bold text-2xl text-[#33272a] pb-10">Resumen</span>
           {cart.map((it) => {
             return (
-              <div key={it.id}>
+              <div key={it.id} className="grid grid-cols-2 gap-8 px-10 py-2 justify-between font-semibold">
                 <p>
                   <span>
-                    {it.nombre} X{it.cantidad}
+                    {it.nombre} X {it.cantidad}
                   </span>
                 </p>
                 <p>Subtotal: ${it.precio * it.cantidad}</p>
               </div>
             );
           })}
-          <p>
-            <span>Total: ${total}</span> 
+          <p className="p-20">
+            <span className="font-bold text-2xl text-[#33272a] text-center">Total: ${total}</span> 
           </p>
         </div>
       </div>
