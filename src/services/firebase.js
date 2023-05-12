@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA7-qWljeMK3ABMC3iHAA5jWws_CZB_eQc",
-  authDomain: "pippa-ecom.firebaseapp.com",
-  projectId: "pippa-ecom",
-  storageBucket: "pippa-ecom.appspot.com",
-  messagingSenderId: "949323385723",
-  appId: "1:949323385723:web:79bd29eb6f895396538bde"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 
