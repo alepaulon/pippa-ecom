@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Item = ({id, nombre, categoria, img, precio, stock}) => {
+const Item = ({id, nombre, img, precio}) => {
 
   return (
     <article className="bg-[#ffc6c7] border-2 border-[#fffffe] m-10 p-4 rounded-lg flex flex-col text-center w-72">
